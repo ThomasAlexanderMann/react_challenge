@@ -1,0 +1,59 @@
+.nav {
+  display: flex;
+  background-color: cadetblue;
+  align-items: center;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+  padding-right: 1rem;
+}
+
+.nav-items > li {
+  padding: 0.8rem;
+}
+
+li::marker{
+  color: cadetblue;
+  font-size: 1.4rem;
+}
+
+.nav > h3{
+  margin-right: auto;
+}
+
+h1 {
+  padding: 0.7rem;
+  margin: 0;
+}
+
+.App-logo {
+  width: 60px;
+}
+
+li {
+  padding: 0.5rem;
+}
+
+.fun-facts-container {
+  max-width: 400px;
+  margin: auto;
+}
+
+main {
+  min-height: 500px;
+  background-color: beige;
+  padding: 1rem;
+}
+
+footer {
+  height: 200px;
+  background-color: cadetblue;
+}
+
+small {
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+}
