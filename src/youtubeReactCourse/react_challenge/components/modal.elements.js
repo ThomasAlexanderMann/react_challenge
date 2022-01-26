@@ -2,7 +2,7 @@ import styled from "styled-components/macro";
 
 const UnstyledModal = ({ id, className, children }) => {
   return (
-    <div id={id} className={className+' hide'}>
+    <div id={id} className={className + " hide"}>
       {children}
     </div>
   );
@@ -22,9 +22,4 @@ export const Modal = styled(UnstyledModal)`
   margin: auto;
   background-color: white;
   border-radius: 10px;
-
-  ${(props) =>
-    props.show &&
-    `display: flex;
-    `};
 `;
