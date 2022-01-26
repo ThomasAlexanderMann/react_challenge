@@ -5,7 +5,7 @@ export function Contact() {
   return (
     <>
       <Page>
-        <h1>This is the contact page</h1>
+        <h1>This is the contact page wooo!!!!</h1>
       </Page>
     </>
   );
