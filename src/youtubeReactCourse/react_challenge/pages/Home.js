@@ -38,7 +38,7 @@ export function Home() {
     <>
       <Page>
         <h1>Adopt a dog today</h1>
-        <h4>This is a  h4 woo</h4>
+        <h4>more changes</h4>
         <p>Start your journey of adoption today</p>
         <h2>Browse our dogs</h2>
         <div className="card-container">{dogProfiles}</div>
