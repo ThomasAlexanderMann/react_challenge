@@ -27,11 +27,16 @@ const dogProfiles = dogs.map((dog, index) => {
   );
 });
 
-
-const showNewsletterModal = () => {
-  alert('show the modal');
+// Where should I keep these functions?
+const showNewsletterSignupModal = () => {
+  const modal = document.getElementById('newsLetterSignupModal'); 
+  modal.classList.remove('hide');
 };
 
+const hideNewsletterSignupModal = () => {
+  const modal = document.getElementById('newsLetterSignupModal');
+  modal.classList.add('hide'); 
+}
 
 export function Home() {
   return (
@@ -43,12 +48,13 @@ export function Home() {
         <h2>Browse our dogs</h2>
         <div className="card-container">{dogProfiles}</div>
         <div className="flex-center newsletter">
-          <Button id="test" onClick={showNewsletterModal}>Sign up to our newsletter</Button>
+          <Button id="test" onClick={showNewsletterSignupModal}>Sign up to our newsletter</Button>
         </div>
-        <Modal id="newsLetterSignup">
+        <Modal id="newsLetterSignupModal">
           <h2>Sign up to our newsletter</h2>
           <p>Form goes here</p>
           <Button>Sign up</Button>
+          <Button onClick={hideNewsletterSignupModal}>Close</Button>
         </Modal>
       </Page>
     </>

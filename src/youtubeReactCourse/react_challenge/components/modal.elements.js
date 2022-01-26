@@ -2,14 +2,14 @@ import styled from "styled-components/macro";
 
 const UnstyledModal = ({ id, className, children }) => {
   return (
-    <div id={id} className={className}>
+    <div id={id} className={className+' hide'}>
       {children}
     </div>
   );
 };
 
 export const Modal = styled(UnstyledModal)`
-  display: none;
+  display: flex;
   flex-direction: column;
   position: fixed;
   top: 20px;
@@ -18,9 +18,10 @@ export const Modal = styled(UnstyledModal)`
 
   width: 100%;
   max-width: 500px;
-  margin: auto;
   height: 70vh;
+  margin: auto;
   background-color: white;
+  border-radius: 10px;
 
   ${(props) =>
     props.show &&

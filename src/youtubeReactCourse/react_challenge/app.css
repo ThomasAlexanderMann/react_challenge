@@ -118,3 +118,7 @@ footer {
   background-color: antiquewhite;
   min-height: 200px;
 }
+
+.hide{
+  display: none !important;
+}
