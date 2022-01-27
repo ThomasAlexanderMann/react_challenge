@@ -15,7 +15,7 @@ export const Modal = styled(UnstyledModal)`
   top: 20px;
   left: 0;
   right: 0;
-
+  
   width: 100%;
   max-width: 500px;
   height: 70vh;
