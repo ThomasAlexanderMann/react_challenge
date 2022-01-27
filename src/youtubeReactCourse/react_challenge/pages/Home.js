@@ -29,14 +29,14 @@ const dogProfiles = dogs.map((dog, index) => {
 
 // Where should I keep these functions?
 const showNewsletterSignupModal = () => {
-  const modal = document.getElementById('newsLetterSignupModal'); 
-  modal.classList.remove('hide');
+  const modal = document.getElementById("newsLetterSignupModal");
+  modal.classList.remove("hide");
 };
 
 const hideNewsletterSignupModal = () => {
-  const modal = document.getElementById('newsLetterSignupModal');
-  modal.classList.add('hide'); 
-}
+  const modal = document.getElementById("newsLetterSignupModal");
+  modal.classList.add("hide");
+};
 
 export function Home() {
   return (
@@ -48,7 +48,9 @@ export function Home() {
         <h2>Browse our dogs</h2>
         <div className="card-container">{dogProfiles}</div>
         <div className="flex-center newsletter">
-          <Button id="test" onClick={showNewsletterSignupModal}>Sign up to our newsletter</Button>
+          <Button id="test" onClick={showNewsletterSignupModal}>
+            Sign up to our newsletter
+          </Button>
         </div>
         <Modal id="newsLetterSignupModal">
           <h2>Sign up to our newsletter</h2>
@@ -60,3 +62,22 @@ export function Home() {
     </>
   );
 }
+
+
+const module = {
+  x: 42,
+  getX: function() {
+    return this.x;
+  }
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// expected output: 42
+
+
+
