@@ -12,7 +12,7 @@ export const Modal = styled(UnstyledModal)`
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 20px;
+  top: 15vh;
   left: 0;
   right: 0;
   
