@@ -1,21 +1,10 @@
-import styled from "styled-components/macro";
+import styled from "styled-components";
 
-const ButtonUnstyled = ({ id, className, children, onClick }) => {
-  return (
-    <button id={id} className={className} onClick={onClick}>
-      {children}
-    </button>
-  );
-};
-
-export const Button = styled(ButtonUnstyled)`
-  border-radius: 3px;
-
+export const Button = styled.button`
   background: palevioletred;
   color: white;
-
   border: 2px solid palevioletred;
-
+  border-radius: 3px;
   margin: 0.5rem auto;
   padding: 0.5rem 1.5rem;
 

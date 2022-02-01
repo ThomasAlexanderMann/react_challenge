@@ -1,16 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Menu} from './menu.elements';
+import { StyledLink } from "./styledLink.elements.js";
 
 export function Header() {
   return (
     <header>
       <nav>
-        <h1>Adopt a Dog</h1>
-        <ul className="nav-items">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
+        <StyledLink to="/"><h1>Adopt a Dog</h1></StyledLink>
+        <Menu></Menu>
       </nav>
     </header>
   );

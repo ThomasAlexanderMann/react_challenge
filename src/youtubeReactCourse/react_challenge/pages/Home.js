@@ -6,7 +6,7 @@ import { Card } from "../components/Card";
 
 // Import: styled components
 import { Button } from "../components/button.elements";
-import { Modal } from "../components/modal.elements";
+import { Modal, ModalBackground } from "../components/modal.elements";
 
 // Import: array of data
 import { dogs } from "../data/dogs.js";
@@ -38,6 +38,10 @@ const hideNewsletterSignupModal = () => {
   modal.classList.add("hide");
 };
 
+const testFunc = () => {
+  alert('testing...');
+}
+
 export function Home() {
   return (
     <>
@@ -46,38 +50,24 @@ export function Home() {
         <h4>more changes</h4>
         <p>Start your journey of adoption today</p>
         <h2>Browse our dogs</h2>
+
         <div className="card-container">{dogProfiles}</div>
+
         <div className="flex-center newsletter">
           <Button id="test" onClick={showNewsletterSignupModal}>
             Sign up to our newsletter
           </Button>
         </div>
+
         <Modal id="newsLetterSignupModal">
           <h2>Sign up to our newsletter</h2>
           <p>Form goes here</p>
           <Button>Sign up</Button>
           <Button onClick={hideNewsletterSignupModal}>Close</Button>
         </Modal>
+        
+
       </Page>
     </>
   );
 }
-
-
-const module = {
-  x: 42,
-  getX: function() {
-    return this.x;
-  }
-};
-
-const unboundGetX = module.getX;
-console.log(unboundGetX()); // The function gets invoked at the global scope
-// expected output: undefined
-
-const boundGetX = unboundGetX.bind(module);
-console.log(boundGetX());
-// expected output: 42
-
-
-
