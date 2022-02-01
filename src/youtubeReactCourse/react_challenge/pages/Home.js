@@ -39,34 +39,36 @@ const hideNewsletterSignupModal = () => {
 };
 
 const testFunc = () => {
-  alert('testing...');
-}
+  alert("testing...");
+};
 
 export function Home() {
   return (
     <>
       <Page>
         <h1>Adopt a dog today</h1>
-        <h4>more changes</h4>
         <p>Start your journey of adoption today</p>
         <h2>Browse our dogs</h2>
 
         <div className="card-container">{dogProfiles}</div>
 
         <div className="flex-center newsletter">
-          <Button id="test" onClick={showNewsletterSignupModal}>
-            Sign up to our newsletter
-          </Button>
+          <Modal buttonText={"Sign up to our newsletter"}>
+            <h2>Sign up to our newsletter</h2>
+            <p>Form goes here</p>
+            <Button>Sign up</Button>
+            <Modal buttonText={"Modal Inception"}>
+            <h2>This modal was called within a modal</h2>
+          </Modal>
+          </Modal>
+
+          <Modal buttonText={"see another modal"}>
+            <h2>Another modal</h2>
+            <p>Form goes here</p>
+          </Modal>    
         </div>
 
-        <Modal id="newsLetterSignupModal">
-          <h2>Sign up to our newsletter</h2>
-          <p>Form goes here</p>
-          <Button>Sign up</Button>
-          <Button onClick={hideNewsletterSignupModal}>Close</Button>
-        </Modal>
-        
-
+      
       </Page>
     </>
   );
