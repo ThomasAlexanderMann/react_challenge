@@ -3,10 +3,11 @@ import React from "react";
 // Import: components
 import { Page } from "../components/Page";
 import { Card } from "../components/Card";
+import { Input } from "../components/inputs.elements";
 
 // Import: styled components
 import { Button } from "../components/button.elements";
-import { Modal, ModalBackground } from "../components/modal.elements";
+import { Modal } from "../components/modal.elements";
 
 // Import: array of data
 import { dogs } from "../data/dogs.js";
@@ -53,22 +54,22 @@ export function Home() {
         <div className="card-container">{dogProfiles}</div>
 
         <div className="flex-center newsletter">
-          <Modal buttonText={"Sign up to our newsletter"}>
+          <Modal openModalButtonText={"Sign up to our newsletter"}>
             <h2>Sign up to our newsletter</h2>
-            <p>Form goes here</p>
+            <Input type="text" placeholder="Your email here..."/>
             <Button>Sign up</Button>
-            <Modal buttonText={"Modal Inception"}>
-            <h2>This modal was called within a modal</h2>
-          </Modal>
+
+            <Modal openModalButtonText={"Whats in our newsletter?"}>
+              <h2>Whats in our newsletter?</h2>
+              <ul>
+                <li>New arrivals</li>
+                <li>Adoption stories</li>
+                <li>Tips and activities for dog owners</li>
+              </ul>
+            </Modal>
           </Modal>
 
-          <Modal buttonText={"see another modal"}>
-            <h2>Another modal</h2>
-            <p>Form goes here</p>
-          </Modal>    
         </div>
-
-      
       </Page>
     </>
   );

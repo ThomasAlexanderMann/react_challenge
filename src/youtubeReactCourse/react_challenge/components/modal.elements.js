@@ -2,13 +2,13 @@ import styled from "styled-components/macro";
 import { useState } from "react";
 import { Button } from "../components/button.elements";
 
-// dislay modal div based on state
+// display modal div based on state passed as props
 const ModalDiv = styled.div`
   display: ${(props) => props.modalOpen && "flex !important;"};
 `;
 
 // modal component before styling
-const UnstyledModal = ({ id, className, children, buttonText }) => {
+const UnstyledModal = ({ className, children, openModalButtonText }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -18,11 +18,12 @@ const UnstyledModal = ({ id, className, children, buttonText }) => {
           setModalOpen(true);
         }}
       >
-        {buttonText}
+        {openModalButtonText}
       </Button>
 
-      <ModalDiv id={id} className={className} modalOpen={modalOpen} >
+      <ModalDiv className={className} modalOpen={modalOpen}>
         {children}
+
         <Button
           onClick={() => {
             setModalOpen(false);
@@ -49,17 +50,10 @@ export const Modal = styled(UnstyledModal)`
   max-width: 500px;
   height: 70vh;
   margin: auto;
+  padding: 1rem;
   background-color: antiquewhite;
   border: 6px solid #fff;
-  border-radius: 10px; ;
+  border-radius: 10px;
 `;
 
-export const ModalBackground = styled.div`
-  z-index: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(30, 30, 30, 0.5);
-`;
+
