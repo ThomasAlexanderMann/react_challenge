@@ -4,13 +4,13 @@ import { buttonstyles } from "./button.elements";
 
 const inputAndTextAreaStyles = `
     width: 100%;
-    padding: 0.5rem;
+    padding: .7rem 0.5rem;
     border-radius: 10px;
     border: none;
     text-align: center;
-    
-    & focus-visible{
-        outline: 3px solid blanchedalmond;
+
+    &:focus-visible{
+        outline: 2px solid palevioletred;;
     }
     `;
 
@@ -25,6 +25,6 @@ export const TextArea = styled.input`
 // styled like a button
 export const InputSubmit = styled.input`
   ${buttonstyles}
-  width: 100%; 
-  max-width: 10rem; 
+  width: 100%;
+  max-width: 10rem;
 `;

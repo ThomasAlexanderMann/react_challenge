@@ -12,7 +12,7 @@ import { Modal } from "../components/modal.elements";
 // Import: array of data
 import { dogs } from "../data/dogs.js";
 
-// map data into component
+// map data into component -- dog cards
 const dogProfiles = dogs.map((dog, index) => {
   return (
     <Card
@@ -28,21 +28,6 @@ const dogProfiles = dogs.map((dog, index) => {
   );
 });
 
-// Where should I keep these functions?
-const showNewsletterSignupModal = () => {
-  const modal = document.getElementById("newsLetterSignupModal");
-  modal.classList.remove("hide");
-};
-
-const hideNewsletterSignupModal = () => {
-  const modal = document.getElementById("newsLetterSignupModal");
-  modal.classList.add("hide");
-};
-
-const testFunc = () => {
-  alert("testing...");
-};
-
 export function Home() {
   return (
     <>
@@ -56,7 +41,7 @@ export function Home() {
         <div className="flex-center newsletter">
           <Modal openModalButtonText={"Sign up to our newsletter"}>
             <h2>Sign up to our newsletter</h2>
-            <Input type="text" placeholder="Your email here..."/>
+            <Input type="text" placeholder="Your email here..." />
             <Button>Sign up</Button>
 
             <Modal openModalButtonText={"Whats in our newsletter?"}>
@@ -68,7 +53,6 @@ export function Home() {
               </ul>
             </Modal>
           </Modal>
-
         </div>
       </Page>
     </>

@@ -9,10 +9,12 @@ const ModalDiv = styled.div`
 
 // modal component before styling
 const UnstyledModal = ({ className, children, openModalButtonText }) => {
+  //modal state
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <>
+      {/* Open modal button */}
       <Button
         onClick={() => {
           setModalOpen(true);
@@ -24,6 +26,7 @@ const UnstyledModal = ({ className, children, openModalButtonText }) => {
       <ModalDiv className={className} modalOpen={modalOpen}>
         {children}
 
+        {/* Close modal button */}
         <Button
           onClick={() => {
             setModalOpen(false);
@@ -55,5 +58,3 @@ export const Modal = styled(UnstyledModal)`
   border: 6px solid #fff;
   border-radius: 10px;
 `;
-
-

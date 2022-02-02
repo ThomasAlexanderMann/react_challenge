@@ -2,15 +2,12 @@ import React, { useState } from "react";
 import { StyledLink } from "./styledLink.elements";
 import styled from "styled-components";
 
-const Button = styled.button`
-  background-color: ${(props) => props.menuOpen && "green"};
-`;
-
 const Ul = styled.ul`
   display: ${(props) => props.menuOpen && "flex !important"};
 `;
 
 function UnstyledMenu({ className }) {
+  // Menu state
   const [menuOpen, setMenuState] = useState(false);
 
   function toggleMenu() {
@@ -19,11 +16,11 @@ function UnstyledMenu({ className }) {
 
   return (
     <div className={className}>
-      <Button id="nav-button" onClick={toggleMenu} menuOpen={menuOpen}>
+      <button id="nav-button" onClick={toggleMenu}>
         <div></div>
         <div></div>
         <div></div>
-      </Button>
+      </button>
 
       <Ul className="nav-items" menuOpen={menuOpen}>
         <li>
