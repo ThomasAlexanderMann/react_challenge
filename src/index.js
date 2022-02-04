@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 
 // import: components
-import { App } from "./youtubeReactCourse/react_challenge/App.js";
+import {App}  from "./youtubeReactCourse/react_challenge/App.js";
 
 ReactDOM.render(
   <React.StrictMode>

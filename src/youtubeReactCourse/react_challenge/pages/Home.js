@@ -4,26 +4,21 @@ import React from "react";
 import { Page } from "../components/Page";
 import { Card } from "../components/Card";
 import { Input } from "../components/inputs.elements";
+import { Ul } from "../components/ul.elements";
 
 // Import: styled components
 import { Button } from "../components/button.elements";
 import { Modal } from "../components/modal.elements";
 
-// Import: array of data
+// Import: array of objects
 import { dogs } from "../data/dogs.js";
 
 // map data into component -- dog cards
 const dogProfiles = dogs.map((dog, index) => {
   return (
     <Card
-      key={"dog-" + index} // not used currently
-      name={dog.name}
-      image={dog.image}
-      breed={dog.breed}
-      gender={dog.gender}
-      age={dog.age}
-      viciousness={dog.viciousness}
-      available={dog.available}
+      key={"dog-" + index} // not used currently - makes error go away
+      dog={dog}
     />
   );
 });
@@ -46,11 +41,11 @@ export function Home() {
 
             <Modal openModalButtonText={"Whats in our newsletter?"}>
               <h2>Whats in our newsletter?</h2>
-              <ul>
+              <Ul>
                 <li>New arrivals</li>
                 <li>Adoption stories</li>
                 <li>Tips and activities for dog owners</li>
-              </ul>
+              </Ul>
             </Modal>
           </Modal>
         </div>

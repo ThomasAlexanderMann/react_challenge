@@ -11,7 +11,9 @@ function UnstyledMenu({ className }) {
   const [menuOpen, setMenuState] = useState(false);
 
   function toggleMenu() {
-    setMenuState(!menuOpen);
+    // The argument to the setter should be a function for some reason. -- best practice
+    // This function gets provided with the old state value
+    setMenuState((prevState) => !prevState);
   }
 
   return (

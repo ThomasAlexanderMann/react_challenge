@@ -16,6 +16,8 @@ function UnstyledContactForm({ className }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+
       alert(`Name: ${name} \r email:  ${email} \r Message: ${message} 
       \r `);
   };

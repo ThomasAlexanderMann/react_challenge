@@ -43,6 +43,7 @@ export const Modal = styled(UnstyledModal)`
   z-index: 1;
   display: none;
   flex-direction: column;
+  justify-content: space-evenly;
   position: fixed;
   top: 15vh;
   left: 0;
@@ -53,7 +54,7 @@ export const Modal = styled(UnstyledModal)`
   max-width: 500px;
   height: 70vh;
   margin: auto;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: antiquewhite;
   border: 6px solid #fff;
   border-radius: 10px;

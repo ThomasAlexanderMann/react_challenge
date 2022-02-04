@@ -78,7 +78,7 @@ export const dogs = [
       years: 9,
     },
     viciousness: 3,
-    available: true,
+    available: false,
   },
   {
     name: "Eric",
@@ -90,7 +90,7 @@ export const dogs = [
       years: 0,
     },
     viciousness: 0,
-    available: true,
+    available: false,
   },
   {
     name: "Beryl",
