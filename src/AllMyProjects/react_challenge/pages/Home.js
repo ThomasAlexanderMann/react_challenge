@@ -3,12 +3,12 @@ import React from "react";
 // Import: components
 import { Page } from "../components/Page";
 import { Card } from "../components/Card";
-import { Input } from "../components/inputs.elements";
-import { Ul } from "../components/ul.elements";
 
 // Import: styled components
 import { Button } from "../components/button.elements";
 import { Modal } from "../components/modal.elements";
+import { Ul } from "../components/ul.elements";
+import { Input } from "../components/inputs.elements";
 
 // Import: array of objects
 import { dogs } from "../data/dogs.js";

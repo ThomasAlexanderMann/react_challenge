@@ -45,14 +45,14 @@ export const Modal = styled(UnstyledModal)`
   flex-direction: column;
   justify-content: space-evenly;
   position: fixed;
-  top: 15vh;
+  top: 10vh;
   left: 0;
   right: 0;
-  top: 15vh;
 
   width: 90%;
   max-width: 500px;
-  height: 70vh;
+  height: 400px;
+  max-height: 400px;
   margin: auto;
   padding: 1.5rem;
   background-color: antiquewhite;

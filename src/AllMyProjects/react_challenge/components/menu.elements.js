@@ -40,7 +40,7 @@ function UnstyledMenu({ className }) {
 }
 
 export const Menu = styled(UnstyledMenu)`
-  #nav-button {
+   #nav-button {
     height: fit-content;
     padding: 1rem;
     background-color: antiquewhite;
