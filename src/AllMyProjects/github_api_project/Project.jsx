@@ -12,7 +12,7 @@ import {
 
 import { isEmpty, notEmpty } from "./utils";
 
-import { Followers } from "./Followers";
+import { Followers } from "./Followers/Followers";
 
 export default function Project() {
   console.log("Project render");

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 // components
-import { ProfilePicture } from "./Project.elements";
+import { ProfilePicture } from "../Project.elements";
 
-import { isEmpty, notEmpty } from "./utils";
+import { FollowerContainer, FollowersContainer } from "./Followers.elements";
+
+import { isEmpty, notEmpty } from "../utils";
 
 export function Followers({ followers_url }) {
   console.log("Followers rendered");
@@ -24,25 +26,21 @@ export function Followers({ followers_url }) {
 
   return (
     <>
-      <h2>Who is following you?</h2>
-      {
-        /* 
-        followers is an array of objects
-        for each follower I want a picture and a name
-        
-      */
-        notEmpty(followers) ? (
-          followers.map((element) => {
+      <FollowersContainer>
+        <h2>Who is following you?</h2>
+        {notEmpty(followers) ? (
+          followers.map((follower) => {
             return (
-              <div>
-                <ProfilePicture src={element.avatar_url} />
-              </div>
+              <FollowerContainer>
+                <ProfilePicture src={follower.avatar_url} smallPicture />
+                <h3>{follower.login}</h3>
+              </FollowerContainer>
             );
           })
         ) : (
           <p>"no followers..."</p>
-        )
-      }
+        )}
+      </FollowersContainer>
     </>
   );
 }
